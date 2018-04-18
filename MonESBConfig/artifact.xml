@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="Jedi" groupId="fr.smile.training.MonESBConfig.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/Jedi.xml</file>
+    </artifact>
+    <artifact name="JediSeq" groupId="fr.smile.training.MonESBConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/JediSeq.xml</file>
+    </artifact>
+    <artifact name="JediTemp" groupId="fr.smile.training.MonESBConfig.template" version="1.0.0" type="synapse/sequenceTemplate" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/templates/JediTemp.xml</file>
+    </artifact>
+</artifacts>

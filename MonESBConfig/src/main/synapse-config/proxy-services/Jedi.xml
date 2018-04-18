@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="Jedi" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_696e5a23-f50d-4ded-8977-9f7cc436525a">
+            <address uri="http://localhost:8081/wso2/test/"/>
+        </endpoint>
+        <inSequence>
+            <log/>
+        </inSequence>
+        <outSequence>
+            <sequence key="JediSeq"/>
+            <filter xpath="//bloblo">
+                <then>
+                    <call-template target="SUCCESS"/>
+                    <property name="messageType" scope="axis2" type="STRING" value="application/soap+xml"/>
+                </then>
+                <else>
+                    <call-template target="ERROR"/>
+                </else>
+            </filter>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

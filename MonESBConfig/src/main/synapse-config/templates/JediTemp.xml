@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="JediTemp" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="message"/>
+    <parameter name="prenom"/>
+    <sequence>
+        <log>
+            <property expression="$func:prenom" name="PRENOM"/>
+        </log>
+    </sequence>
+</template>
